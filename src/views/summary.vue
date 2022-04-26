@@ -1,6 +1,6 @@
 <template>
-  <div class="page-wrapper summary-page">
-    <div v-if="!packagePurchased">
+  <div class="page-wrapper">
+    <div class="summary-page" v-if="!packagePurchased">
       <div class="title-and-tagline">
         <h1>Summary Page</h1>
         <div class="tagline">Please Review your submitted Application</div>
@@ -26,7 +26,7 @@
           </li>
         </ul>
 
-        <div class="button-wrapper">
+        <div class="button-wrapper text-center">
           <button
             type="button"
             @click="$router.go(-1)"
@@ -41,12 +41,11 @@
       </div>
     </div>
 
-    <div v-if="packagePurchased">
+    <div class="purchased-page" v-if="packagePurchased">
       <div class="title-and-tagline">
         <h1>Thank You</h1>
         <div class="tagline">You Successfully purchase the insurance. :)</div>
       </div>
-      <br />
       <br />
       <br />
       <div class="content-body-wrapper text-center">

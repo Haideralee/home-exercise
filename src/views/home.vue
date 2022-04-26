@@ -8,7 +8,7 @@
     <div class="content-body-wrapper text-center">
       <p>Let's buy some insurance. It is going to take only a few steps.</p>
 
-      <div class="button-wrapper">
+      <div class="button-wrapper text-center">
         <button
           type="button"
           @click="$router.push('/user')"

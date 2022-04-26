@@ -7,7 +7,7 @@
 
     <div class="content-body-wrapper">
       <form>
-        <div class="validation-alert" v-if="isFormValid">
+        <div class="validation-alert text-center" v-if="isFormValid">
           Please Filled All Mandatory Fields
         </div>
 
@@ -91,7 +91,7 @@
           <h2>Your Premium is: {{ calculatePremium }} {{ form.currency }}</h2>
         </div>
 
-        <div class="button-wrapper">
+        <div class="button-wrapper text-center">
           <button
             type="button"
             @click="$router.go(-1)"
@@ -207,4 +207,7 @@ export default {
 </script>
 
 <style>
+.user-page {
+  margin: 30px auto;
+}
 </style>
