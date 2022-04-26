@@ -3,7 +3,7 @@
     <div v-if="!packagePurchased">
       <div class="title-and-tagline">
         <h1>Summary Page</h1>
-        <div class="tagline">Please Review you Application</div>
+        <div class="tagline">Please Review your submitted Application</div>
       </div>
 
       <div class="content-body-wrapper text-center">
@@ -22,7 +22,7 @@
             <strong>Package: </strong> <span> {{ insurance.insurance }} </span>
           </li>
           <li>
-            <strong>Premium: </strong> <span> {{ insurance.premium }} HKD</span>
+            <strong>Premium: </strong> <span> {{ insurance.premium }} {{ insurance.currency }}</span>
           </li>
         </ul>
 
