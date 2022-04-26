@@ -6,7 +6,10 @@
     </div>
 
     <div class="content-body-wrapper text-center">
-      <p>Let's buy some insurance. It is going to take only a few steps.</p>
+      <p>
+        Let's buy some insurance. <br />
+        It is going to take only a few steps.
+      </p>
 
       <div class="button-wrapper text-center">
         <button
