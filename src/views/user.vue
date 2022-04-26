@@ -7,7 +7,7 @@
 
     <div class="content-body-wrapper">
       <form>
-        <div class="validation-alert" v-if="validationAlert">
+        <div class="validation-alert" v-if="isFormValid">
           Please Filled All Mandatory Fields
         </div>
 
@@ -130,7 +130,7 @@ export default {
   },
   data() {
     return {
-      validationAlert: false,
+      isFormValid: false,
       countries: [
         {
           name: "Hone Kong",
@@ -165,12 +165,12 @@ export default {
     },
     next() {
       const { name, age, country, currency, insurance } = this.form;
-      this.validationAlert = false;
+      this.isFormValid = false;
 
       if (!name || !age || !country || !currency || !insurance) {
-        this.validationAlert = true;
+        this.isFormValid = true;
       } else if (age > 100) {
-        this.$store.dispatch("resetInsuranceDetail");
+        this.$store.dispatch("resetInsuranceDetails");
         this.$router.push("/error");
       } else {
         this.form.premium = this.calculatePremium;

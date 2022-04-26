@@ -7,12 +7,12 @@
       </div>
 
       <div class="content-body-wrapper text-center">
-        <ul>
+        <ul class="list-style-none">
           <li>
             <strong>Name: </strong> <span> {{ insurance.name }} </span>
           </li>
           <li>
-            <strong>Age: </strong> <span> {{ insurance.age }} </span>
+            <strong>Age: </strong> <span> {{ insurance.age }} Years </span>
           </li>
           <li>
             <strong>Where do you live: </strong>
@@ -84,7 +84,7 @@ export default {
       this.packagePurchased = !this.packagePurchased;
     },
     goToHome() {
-      this.$store.dispatch("resetInsuranceDetail");
+      this.$store.dispatch("resetInsuranceDetails");
       this.$router.push("/");
     },
   },

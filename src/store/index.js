@@ -5,7 +5,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    insuranceDetail: {
+    insuranceDetails: {
       name: "",
       age: "",
       country: "",
@@ -16,11 +16,11 @@ export default new Vuex.Store({
   },
 
   mutations: {
-    setInsuranceDetail(state, insuranceDetail) {
-      state.insuranceDetail = { ...insuranceDetail };
+    setInsuranceDetails(state, insuranceDetails) {
+      state.insuranceDetails = { ...insuranceDetails };
     },
-    resetInsuranceDetail(state) {
-      state.insuranceDetail = {
+    resetInsuranceDetails(state) {
+      state.insuranceDetails = {
         name: "",
         age: "",
         country: "",
@@ -33,14 +33,14 @@ export default new Vuex.Store({
 
   actions: {
     updateInsuranceDetail({ commit }, payload) {
-      commit("setInsuranceDetail", payload);
+      commit("setInsuranceDetails", payload);
     },
-    resetInsuranceDetail({ commit }) {
-      commit("resetInsuranceDetail");
+    resetInsuranceDetails({ commit }) {
+      commit("resetInsuranceDetails");
     },
   },
 
   getters: {
-    insurance: (state) => state.insuranceDetail,
+    insurance: (state) => state.insuranceDetails,
   },
 });
